@@ -1,0 +1,266 @@
+* {box-sizing:border-box;}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(63,94,251);
+    background: linear-gradient(112deg, rgba(63,94,251,1) 0%, rgba(70,252,213,0.4009978991596639) 100%);
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+header{
+    
+    position: absolute;
+    top:0;
+    width: 100%;
+    background:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3F51B5;
+    border-bottom: 2px solid #041261;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+button{
+    appearance:none;
+    -webkit-appearance:none;
+    padding:10px;
+    border-bottom:2px solid #fff;
+    background-color:#3f7cb5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+}
+
+button:hover{
+    background-color: #529ee6;
+}
+button:active {
+    background-color: #529ee6;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+h1{
+    text-transform: uppercase;
+    color:white;
+    margin: 0;
+    border-bottom: 1px white solid;
+}
+
+h3{
+    text-transform: uppercase;
+    color:white;
+    margin: 0;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+main{
+    margin-top: 20%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#mainGamePage{
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form input{
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid grey;
+    border-radius:10px;
+    width:100%;
+}
+
+#btn{
+    appearance:none;
+    -webkit-appearance:none;
+
+    padding:10px;
+    border-bottom:2px solid #fff;
+    background-color:#3f7cb5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    
+}
+
+#btn:hover{
+    background-color: #529ee6;
+}
+
+#btn:active {
+    background-color: #529ee6;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+@keyframes smoothbounceball1{ 
+    from { transform: translate3d(0, -50px, 0);} 
+    to { transform: translate3d(0, 0, 0);} 
+} 
+
+@keyframes smoothbounceball2{ 
+    from { transform: translate3d(0, -50px, 0);} 
+    to { transform: translate3d(0, 0, 0);} 
+} 
+
+@keyframes smoothbounceball3{ 
+    from { transform: translate3d(0, -50px, 0);} 
+    to { transform: translate3d(0, 0, 0);} 
+} 
+
+
+img{
+    width: 200px;
+    height: 150px;
+    border-radius:50%;
+    margin: 20px;
+
+}
+
+#imgRock{
+    animation: smoothbounceball1 0.4s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    
+    
+}
+#imgScissor{
+    animation: smoothbounceball2 0.4s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+}
+#imgPaper{
+    animation: smoothbounceball3 0.4s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite;
+}
+
+#pick{
+position: absolute;   
+top: 100px;
+padding: 10px;
+font-weight: bold;
+background-color: #fff;
+border: 2px #041262 solid;
+}
+
+#options button{
+    display: inline-flex;
+    justify-content:center;
+    align-items: flex-end;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px #041261;
+    text-decoration-line: overline underline;
+    text-decoration-style: double;
+}
+
+#rock{
+background-image: url(/img/rock/rockSmack.jfif);
+background-size: cover;
+width: 200px;
+height: 200px;
+font-size: 2rem;
+}
+
+#paper{
+background-image: url(/img/paper/paperSmack.jfif);
+background-size: cover;
+width: 200px;
+height: 200px;
+font-size: 2rem;
+}
+
+#scissors{
+background-image: url(/img/scissors/scissorsSmack.jfif);
+background-size: cover;
+width: 200px;
+height: 200px;
+font-size: 2rem;
+}
+
+#result{
+    width: 48%;
+    display: flex;
+    justify-content:space-between;
+}
+
+#result div{
+    width: 250px;
+}
+
+#result div p{
+    font-weight: bold;
+    font-size: small;
+    text-transform: uppercase;
+    background-color: rgb(175, 223, 247);
+    padding: 10px;
+    border: #041261 groove 4px;
+    height: 40px;
+    width: 220px;
+    margin-top: 40px;
+}
+
+#scoreBoard{
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding:0;
+    width: 120px;
+    border: #041261 groove 4px;
+    font-weight: bold;
+   
+    
+}
+
+#scoreBoard li{
+    border: 1px solid black;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size:medium;
+    text-transform: uppercase;
+    background-color: rgb(175, 223, 247);
+    
+}
+
+span{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
