@@ -1,13 +1,12 @@
-const formBtn = document.querySelector('#chooseName #btn');
-const page = '/html/gamePage.html';
+const getStartButton = document.querySelector('#chooseName #startButton');
+const gamePage = '/html/gamePage.html';
 
-formBtn.addEventListener('click', event => {
+getStartButton.addEventListener('click', event => {
     event.preventDefault();
 
-    const inputEl = document.querySelector('#chooseName #nameInput');
-    const inputText = inputEl.value;
-    
-    console.log(inputText);
-    document.cookie = `playerName=${ inputText }`;
-    window.location.assign(page)
+    const nameInput = document.querySelector('#chooseName #nameInput');
+    const choosenName = nameInput.value;
+
+    document.cookie = `playerName=${choosenName}`;
+    window.location.assign(gamePage)
 })
