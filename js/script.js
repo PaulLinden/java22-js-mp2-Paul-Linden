@@ -6,6 +6,10 @@ getStartButton.addEventListener('click', event => {
 
     const nameInput = document.querySelector('#chooseName #nameInput');
     const choosenName = nameInput.value;
+    
+    if (choosenName == '') {
+        choosenName = 'Player';
+    }
 
     document.cookie = `playerName=${choosenName}`;
     window.location.assign(gamePage)
