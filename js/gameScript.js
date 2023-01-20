@@ -2,7 +2,7 @@ const playerNameCookie = document.cookie;
 const getPlayerNameDisplay = document.querySelector('#playerName');
 const getGifDisplay = document.querySelector('#gifDisplay');
 const gameOptions = ['rock', 'paper', 'scissors'];
-const gameOverPage = './html/gameOver.html'
+const gameOverPage = '../html/gameOver.html'
 let pointsPlayerAndComp = [0, 0];
 
 getPlayerNameDisplay.innerHTML = playerNameCookie.split('; ').find((row) => row.startsWith('playerName='))?.split('=')[1] + ' vs. Computer';
@@ -27,7 +27,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     //----You Choose Rock----------------------------
     if (playerChoice === gameOptions[0] && getComputerChoice == gameOptions[2]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="./img/rock/rockAttack.webp" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/rock/rockAttack.webp" alt="">';
     }
     else if (playerChoice === gameOptions[0] && getComputerChoice == gameOptions[1]) {
         pointsPlayerAndComp[1]++;
@@ -36,7 +36,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     //----You Choose paper----------------------------
     if (playerChoice === gameOptions[1] && getComputerChoice == gameOptions[0]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="./img/paper/paperAttack.gif" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/paper/paperAttack.gif" alt="">';
     }
     else if (playerChoice === gameOptions[1] && getComputerChoice == gameOptions[2]) {
         pointsPlayerAndComp[1]++;
@@ -45,7 +45,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     //----You Choose Scisscor----------------------------
     if (playerChoice === gameOptions[2] && getComputerChoice == gameOptions[1]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="./img/scissors/sciccorsAttack.gif" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/scissors/sciccorsAttack.gif" alt="">';
     }
     else if (playerChoice === gameOptions[2] && getComputerChoice == gameOptions[0]) {
         pointsPlayerAndComp[1]++;

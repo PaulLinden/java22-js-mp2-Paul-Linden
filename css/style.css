@@ -188,7 +188,7 @@ section {
 }
 
 #rock {
-    background-image: url(/img/rock/rockSmack.jpg);
+    background-image: url(../img/rock/rockSmack.jpg);
     background-size: cover;
     width: 200px;
     height: 200px;
@@ -196,7 +196,7 @@ section {
 }
 
 #paper {
-    background-image: url(/img/paper/paperSmack.jpg);
+    background-image: url(../img/paper/paperSmack.jpg);
     background-size: cover;
     width: 200px;
     height: 200px;
@@ -204,7 +204,7 @@ section {
 }
 
 #scissors {
-    background-image: url(/img/scissors/scissorsSmack.jpg);
+    background-image: url(../img/scissors/scissorsSmack.jpg);
     background-size: cover;
     width: 200px;
     height: 200px;

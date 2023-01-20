@@ -1,7 +1,7 @@
 const resultCookie = document.cookie;
 
-const gamePage = './html/gamePage.html';
-const indexPage = './index.html';
+const gamePage = '../html/gamePage.html';
+const indexPage = '../index.html';
 
 const getVideo = document.querySelector('video');
 const getResultDisplay = document.querySelector('#winner');
@@ -10,10 +10,10 @@ const winnerIs = resultCookie.split('; ').find((row) => row.startsWith('result='
 getResultDisplay.innerHTML = winnerIs;
 
 if (winnerIs === 'You Won!!!') {
-    getVideo.innerHTML = '<source src="./video/power.mp4" type="video/mp4"></source>';
+    getVideo.innerHTML = '<source src="../video/power.mp4" type="video/mp4"></source>';
 }
 else if (winnerIs === 'You Lost!!!') {
-    getVideo.innerHTML = '<source src="./video/noPower.mp4" type="video/mp4"></source>';
+    getVideo.innerHTML = '<source src="../video/noPower.mp4" type="video/mp4"></source>';
 }
 
 document.querySelector('#gameOver').addEventListener('click', event => {
