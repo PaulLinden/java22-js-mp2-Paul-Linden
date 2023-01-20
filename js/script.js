@@ -1,5 +1,5 @@
 const getStartButton = document.querySelector('#chooseName #startButton');
-const gamePage = './html/gamePage.html';
+const gamePage = '../html/gamePage.html';
 
 getStartButton.addEventListener('click', event => {
     event.preventDefault();
