@@ -8,46 +8,48 @@ let pointsPlayerAndComp = [0, 0];
 getPlayerNameDisplay.innerHTML = playerNameCookie.split('; ').find((row) => row.startsWith('playerName='))?.split('=')[1] + ' vs. Computer';
 
 document.querySelector('#mainGamePage #options').addEventListener('click', event => {
-    
+        
+    let playerChoice = event.target.id;
+    let getComputerChoices = getComputerChoice();
     const displayYourPick = document.querySelector('#yourPick');
     const displayCompPick = document.querySelector('#compPick');
-    let playerChoice = event.target.id;
-    let getComputerChoice = getComputerChoice();
     let playerScoreList = document.querySelector('#scorePlayer');
     let computerScoreList = document.querySelector('#scoreComputer');
 
+    console.log(getComputerChoices);
+
     if (playerChoice === 'options') {
         playerChoice = '';
-        getComputerChoice = '';
+        getComputerChoices = '';
     }
 
     displayYourPick.innerText = `Your pick: ${playerChoice}`;
-    displayCompPick.innerText = `Computer pick: ${getComputerChoice}`;
+    displayCompPick.innerText = `Computer pick: ${getComputerChoices}`;
     
     //----You Choose Rock----------------------------
-    if (playerChoice === gameOptions[0] && getComputerChoice == gameOptions[2]) {
+    if (playerChoice === gameOptions[0] && getComputerChoices == gameOptions[2]) {
         pointsPlayerAndComp[0]++;
         getGifDisplay.innerHTML = '<img src="../img/rock/rockAttack.webp" alt="">';
     }
-    else if (playerChoice === gameOptions[0] && getComputerChoice == gameOptions[1]) {
+    else if (playerChoice === gameOptions[0] && getComputerChoices == gameOptions[1]) {
         pointsPlayerAndComp[1]++;
     }
     
     //----You Choose paper----------------------------
-    if (playerChoice === gameOptions[1] && getComputerChoice == gameOptions[0]) {
+    if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[0]) {
         pointsPlayerAndComp[0]++;
         getGifDisplay.innerHTML = '<img src="../img/paper/paperAttack.gif" alt="">';
     }
-    else if (playerChoice === gameOptions[1] && getComputerChoice == gameOptions[2]) {
+    else if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[2]) {
         pointsPlayerAndComp[1]++;
     }
     
     //----You Choose Scisscor----------------------------
-    if (playerChoice === gameOptions[2] && getComputerChoice == gameOptions[1]) {
+    if (playerChoice === gameOptions[2] && getComputerChoices == gameOptions[1]) {
         pointsPlayerAndComp[0]++;
         getGifDisplay.innerHTML = '<img src="../img/scissors/sciccorsAttack.gif" alt="">';
     }
-    else if (playerChoice === gameOptions[2] && getComputerChoice == gameOptions[0]) {
+    else if (playerChoice === gameOptions[2] && getComputerChoices == gameOptions[0]) {
         pointsPlayerAndComp[1]++;
     }
 
@@ -66,7 +68,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
 
 function getComputerChoice() {
     let randomNumber = Math.round(Math.random() * 2);
-
+    
     switch (randomNumber) {
         case 0: return gameOptions[0];
 
