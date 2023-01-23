@@ -283,3 +283,8 @@ img {
     text-align: center;
     width: 180px;
 }
+
+#gameOver button{
+    margin: 10px;
+    width: 100px;
+}
