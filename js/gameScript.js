@@ -29,7 +29,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     //----You Choose Rock----------------------------
     if (playerChoice === gameOptions[0] && getComputerChoices == gameOptions[2]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="/img/rock/rockAttack.webp" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/rock/rockAttack.webp" alt="">';
     }
     else if (playerChoice === gameOptions[0] && getComputerChoices == gameOptions[1]) {
         pointsPlayerAndComp[1]++;
@@ -38,7 +38,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     //----You Choose paper----------------------------
     if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[0]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="./img/paper/paperAttack.gif" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/paper/paperAttack.gif" alt="">';
     }
     else if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[2]) {
         pointsPlayerAndComp[1]++;
