@@ -36,7 +36,9 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
         pointsPlayerAndComp[1]++;
         getGifDisplay.innerHTML = computerScores;
     }
-  
+    else {
+        getGifDisplay.innerHTML = '<p id="displayP">-- Tie --</p>';
+    }
     
     //----You Choose paper----------------------------
     if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[0]) {
@@ -57,10 +59,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
         pointsPlayerAndComp[1]++;
         getGifDisplay.innerHTML = computerScores;
     }
-    else {
-        getGifDisplay.innerHTML = '<p id="displayP">-- Tie --</p>';
-    }
-
+    
     playerScoreList.innerText = `Player: ${pointsPlayerAndComp[0]} `;
     computerScoreList.innerText = `Comp: ${pointsPlayerAndComp[1]} `;
 

@@ -1,6 +1,6 @@
 const resultCookie = document.cookie;
 
-const gamePage = './html/gamePage.html';
+const gamePage = './gamePage.html';
 const indexPage = '../index.html';
 
 const getVideo = document.querySelector('video');
