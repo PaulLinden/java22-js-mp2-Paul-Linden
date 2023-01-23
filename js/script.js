@@ -5,8 +5,8 @@ getStartButton.addEventListener('click', event => {
     event.preventDefault();
 
     const nameInput = document.querySelector('#chooseName #nameInput');
-    const choosenName = nameInput.value;
-    
+    let choosenName = nameInput.value;
+
     if (choosenName == '') {
         choosenName = 'Player';
     }

@@ -2,19 +2,20 @@ const playerNameCookie = document.cookie;
 const getPlayerNameDisplay = document.querySelector('#playerName');
 const getGifDisplay = document.querySelector('#gifDisplay');
 const gameOptions = ['rock', 'paper', 'scissors'];
-const gameOverPage = '../html/gameOver.html'
+const gameOverPage = '/html/gameOver.html'
 let pointsPlayerAndComp = [0, 0];
 
 getPlayerNameDisplay.innerHTML = playerNameCookie.split('; ').find((row) => row.startsWith('playerName='))?.split('=')[1] + ' vs. Computer';
 
 document.querySelector('#mainGamePage #options').addEventListener('click', event => {
         
-    let playerChoice = event.target.id;
-    let getComputerChoices = getComputerChoice();
     const displayYourPick = document.querySelector('#yourPick');
     const displayCompPick = document.querySelector('#compPick');
     let playerScoreList = document.querySelector('#scorePlayer');
     let computerScoreList = document.querySelector('#scoreComputer');
+    let playerChoice = event.target.id;
+    let getComputerChoices = getComputerChoice();
+    const computerScores = '<img src="/img/computerScores.webp" alt=""> <p id="displayP">!Computer Scores!</p>';
 
     console.log(getComputerChoices);
 
@@ -29,28 +30,35 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     //----You Choose Rock----------------------------
     if (playerChoice === gameOptions[0] && getComputerChoices == gameOptions[2]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="../img/rock/rockAttack.webp" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/rock/rockAttack.webp" alt=""> <p id="displayP">!You Score!</p>';
     }
     else if (playerChoice === gameOptions[0] && getComputerChoices == gameOptions[1]) {
         pointsPlayerAndComp[1]++;
+        getGifDisplay.innerHTML = computerScores;
     }
+  
     
     //----You Choose paper----------------------------
     if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[0]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="../img/paper/paperAttack.gif" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/paper/paperAttack.gif" alt=""> <p id="displayP">!You Score!</p>';
     }
     else if (playerChoice === gameOptions[1] && getComputerChoices == gameOptions[2]) {
         pointsPlayerAndComp[1]++;
+        getGifDisplay.innerHTML = computerScores;
     }
     
     //----You Choose Scisscor----------------------------
     if (playerChoice === gameOptions[2] && getComputerChoices == gameOptions[1]) {
         pointsPlayerAndComp[0]++;
-        getGifDisplay.innerHTML = '<img src="../img/scissors/sciccorsAttack.gif" alt="">';
+        getGifDisplay.innerHTML = '<img src="../img/scissors/sciccorsAttack.gif" alt=""> <p id="displayP">!You Score!</p>';
     }
     else if (playerChoice === gameOptions[2] && getComputerChoices == gameOptions[0]) {
         pointsPlayerAndComp[1]++;
+        getGifDisplay.innerHTML = computerScores;
+    }
+    else {
+        getGifDisplay.innerHTML = '<p id="displayP">-- Tie --</p>';
     }
 
     playerScoreList.innerText = `Player: ${pointsPlayerAndComp[0]} `;

@@ -159,7 +159,7 @@ section {
     flex-direction: column;
     background-color: #fff;
     padding: 0;
-    width: 120px;
+    width: 110px;
     border: #041261 groove 4px;
     font-weight: bold;
 }
@@ -218,7 +218,7 @@ section {
 img {
     width: 200px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 30%;
     margin: 20px;
 
 }
@@ -258,8 +258,6 @@ img {
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-delay: 0.2s;
-
-
 }
 
 #imgScissor {
@@ -273,4 +271,15 @@ img {
     animation: smoothbounceball3 0.4s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+
+#gifDisplay{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#result #gifDisplay #displayP{
+    text-align: center;
+    width: 180px;
 }

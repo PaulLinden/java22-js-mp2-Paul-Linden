@@ -1,7 +1,7 @@
 const resultCookie = document.cookie;
 
-const gamePage = '../html/gamePage.html';
-const indexPage = '../index.html';
+const gamePage = '/html/gamePage.html';
+const indexPage = '/index.html';
 
 const getVideo = document.querySelector('video');
 const getResultDisplay = document.querySelector('#winner');
