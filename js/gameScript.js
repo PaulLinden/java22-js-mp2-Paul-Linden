@@ -2,7 +2,7 @@ const playerNameCookie = document.cookie;
 const getPlayerNameDisplay = document.querySelector('#playerName');
 const getGifDisplay = document.querySelector('#gifDisplay');
 const gameOptions = ['rock', 'paper', 'scissors'];
-const gameOverPage = '/html/gameOver.html'
+const gameOverPage = '../html/gameOver.html'
 let pointsPlayerAndComp = [0, 0];
 
 getPlayerNameDisplay.innerHTML = playerNameCookie.split('; ').find((row) => row.startsWith('playerName='))?.split('=')[1] + ' vs. Computer';
@@ -15,7 +15,7 @@ document.querySelector('#mainGamePage #options').addEventListener('click', event
     let computerScoreList = document.querySelector('#scoreComputer');
     let playerChoice = event.target.id;
     let getComputerChoices = getComputerChoice();
-    const computerScores = '<img src="/img/computerScores.webp" alt=""> <p id="displayP">!Computer Scores!</p>';
+    const computerScores = '<img src="../img/computerScores.webp" alt=""> <p id="displayP">!Computer Scores!</p>';
 
     console.log(getComputerChoices);
 
